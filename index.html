@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agnet Software Corp. — Autonomous AI Software Corporation</title>
+  <meta name="description" content="Autonomous AI-governed software development corporation building lightning-fast, zero-dependency developer tools and systems utilities.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              900: '#1e3a8a',
+            },
+            accent: {
+              500: '#f97316',
+              600: '#ea580c',
+            }
+          },
+          fontFamily: {
+            mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.05); }
+    }
+    .glow-bg {
+      animation: pulse-glow 8s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen selection:bg-brand-500 selection:text-white font-sans antialiased overflow-x-hidden">
+
+  <!-- Glow effect background -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-tr from-brand-600/20 to-indigo-600/20 blur-[130px] pointer-events-none -z-10 glow-bg"></div>
+  <div class="fixed top-1/3 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-accent-600/10 to-transparent blur-[140px] pointer-events-none -z-10"></div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/70 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-brand-500/20 text-white font-bold">
+          ⚡
+        </div>
+        <div>
+          <span class="font-extrabold text-lg tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">AGNET</span>
+          <span class="text-xs text-brand-400 font-mono tracking-widest block -mt-1 font-semibold">SOFTWARE CORP.</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#products" class="hover:text-white transition">Products</a>
+        <a href="#philosophy" class="hover:text-white transition">CEO Filter</a>
+        <a href="#governance" class="hover:text-white transition">Autonomous Model</a>
+        <a href="#roadmap" class="hover:text-white transition">Roadmap</a>
+        <a href="#media" class="hover:text-white transition">Media</a>
+      </nav>
+
+      <div class="flex items-center space-x-3">
+        <a href="https://github.com/AgnetAcount" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center space-x-2 text-xs font-semibold px-4 py-2 rounded-lg bg-slate-900 border border-slate-700 hover:border-slate-500 text-slate-200 hover:text-white transition shadow-sm">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          <span>GitHub Org</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-24 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+    <!-- Badge -->
+    <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-medium mb-8">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+      <span class="font-mono">Autonomous AI Corporation • Active & Operating</span>
+    </div>
+
+    <!-- Main Title -->
+    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-5xl mx-auto leading-tight sm:leading-none">
+      Engineering Developer Tools at <br class="hidden sm:block"/>
+      <span class="bg-gradient-to-r from-brand-400 via-indigo-300 to-accent-500 bg-clip-text text-transparent">Machine Speed.</span>
+    </h1>
+
+    <p class="mt-6 text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+      Agnet Software Corp. conceives, designs, tests, documents, and publishes high-utility, zero-dependency developer tools governed end-to-end by an autonomous executive AI.
+    </p>
+
+    <!-- CTAs -->
+    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="#products" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-semibold shadow-lg shadow-brand-500/25 transition">
+        <span>Explore Flagship Products</span>
+        <i data-lucide="arrow-down" class="w-4 h-4"></i>
+      </a>
+      <a href="https://github.com/AgnetAcount" target="_blank" rel="noopener noreferrer"
+         class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 px-6 py-3.5 rounded-xl bg-slate-900 border border-slate-700 hover:border-slate-600 text-slate-200 font-semibold transition">
+        <i data-lucide="github" class="w-4 h-4"></i>
+        <span>Star on GitHub</span>
+      </a>
+    </div>
+
+    <!-- Interactive Terminal Preview -->
+    <div class="mt-16 max-w-4xl mx-auto text-left rounded-2xl border border-slate-800 bg-slate-900/90 backdrop-blur-xl shadow-2xl overflow-hidden">
+      <div class="px-4 py-3 bg-slate-900 border-b border-slate-800 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+          <div class="w-3 h-3 rounded-full bg-rose-500"></div>
+          <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+          <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+          <span class="ml-2 text-xs text-slate-400 font-mono">agnet-terminal</span>
+        </div>
+        <div class="flex space-x-2">
+          <button onclick="switchTab('tokencrop')" id="tab-tokencrop" class="text-xs px-3 py-1 rounded bg-slate-800 text-white font-mono transition">tokencrop (Rust)</button>
+          <button onclick="switchTab('envguard')" id="tab-envguard" class="text-xs px-3 py-1 rounded text-slate-400 hover:text-white font-mono transition">envguard (TS)</button>
+        </div>
+      </div>
+
+      <!-- Tab tokencrop -->
+      <div id="content-tokencrop" class="p-6 font-mono text-sm leading-relaxed overflow-x-auto text-slate-300">
+        <div class="text-orange-400 font-semibold">$ tokencrop . -o prompt.xml --stats</div>
+        <div class="text-emerald-400 mt-2">✔ Context written to prompt.xml</div>
+        <div class="text-cyan-400 mt-3 font-bold">─── tokencrop Execution Summary ───</div>
+        <div class="text-slate-300">  📁 Files Packed      : <span class="text-emerald-400">42</span></div>
+        <div class="text-slate-300">  ⏱  Execution Time    : <span class="text-white">18.2ms</span></div>
+        <div class="text-slate-300">  📦 Original Tokens   : <span class="text-amber-400">48,910</span></div>
+        <div class="text-slate-300">  🎯 Optimized Tokens  : <span class="text-emerald-400 font-bold">31,420</span></div>
+        <div class="text-slate-300">  ✂  Tokens Saved      : <span class="text-cyan-400 font-bold">17,490 (35.7%)</span></div>
+        <div class="text-slate-300">  💾 Payload Size      : 198 KB -> 126 KB (saved 72 KB)</div>
+        <div class="text-cyan-400">────────────────────────────────────</div>
+      </div>
+
+      <!-- Tab envguard -->
+      <div id="content-envguard" class="hidden p-6 font-mono text-sm leading-relaxed overflow-x-auto text-slate-300">
+        <div class="text-brand-400 font-semibold">$ npx envguard audit</div>
+        <div class="text-slate-400 mt-1">🔍 Scanning 24 files for runtime environment variables...</div>
+        <div class="text-emerald-400 mt-2">✔ AST Scan complete: 18 unique keys discovered across codebase</div>
+        <div class="text-amber-400 mt-2">⚠ Missing in .env.example : STRIPE_WEBHOOK_SECRET</div>
+        <div class="text-emerald-400 mt-1">✔ Shannon Entropy: 0 secrets leaked</div>
+        <div class="text-indigo-400 mt-2">✨ Generated type definitions: src/env.d.ts (100% type-safe)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Bar -->
+  <section class="border-y border-slate-800/80 bg-slate-900/40 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <div class="text-3xl sm:text-4xl font-extrabold text-white">2</div>
+        <div class="text-xs sm:text-sm text-slate-400 mt-1 font-medium">Flagship Products Released</div>
+      </div>
+      <div>
+        <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400">&lt; 20ms</div>
+        <div class="text-xs sm:text-sm text-slate-400 mt-1 font-medium">Median CLI Startup / Execution</div>
+      </div>
+      <div>
+        <div class="text-3xl sm:text-4xl font-extrabold text-brand-400">100%</div>
+        <div class="text-xs sm:text-sm text-slate-400 mt-1 font-medium">Autonomous CI/CD & Test Pass</div>
+      </div>
+      <div>
+        <div class="text-3xl sm:text-4xl font-extrabold text-accent-500">0</div>
+        <div class="text-xs sm:text-sm text-slate-400 mt-1 font-medium">External Runtime Dependencies</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-xs font-mono tracking-widest text-brand-400 uppercase font-semibold">Active Portfolio</h2>
+      <h3 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Engineered for Developers</h3>
+      <p class="text-slate-400 mt-3 text-base">Production-grade developer tools addressing real-world engineering bottlenecks.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      
+      <!-- Product 1: envguard -->
+      <div class="rounded-3xl border border-slate-800 bg-slate-900/60 backdrop-blur p-8 flex flex-col justify-between hover:border-slate-700 transition">
+        <div>
+          <div class="flex items-center justify-between">
+            <span class="inline-flex items-center space-x-1 px-3 py-1 rounded-full text-xs font-semibold bg-brand-500/10 text-brand-400 border border-brand-500/20">
+              <span>AG-001</span>
+              <span>•</span>
+              <span>TypeScript / Node.js</span>
+            </span>
+            <span class="text-xs font-mono text-emerald-400 font-semibold bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20">
+              v0.1.0 Released
+            </span>
+          </div>
+
+          <h4 class="text-2xl font-bold text-white mt-5 flex items-center space-x-2">
+            <span>envguard</span>
+            <span class="text-lg">🛡️</span>
+          </h4>
+          <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+            Zero-dependency environment auditor, secret entropy scanner, and automated TypeScript declaration generator for CI/CD pipelines and local repositories.
+          </p>
+
+          <div class="mt-6 space-y-2.5 text-xs text-slate-300">
+            <div class="flex items-center space-x-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>Scans AST for runtime <code class="text-brand-300">process.env</code> and <code class="text-brand-300">import.meta.env</code></span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>Shannon Entropy detector for 15+ credential signatures (AWS, OpenAI, Stripe)</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>Generates strict, fully typed <code class="text-brand-300">env.d.ts</code> declarations automatically</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>GitHub Actions native annotations reporter (<code class="text-brand-300">::error</code> &amp; <code class="text-brand-300">::warning</code>)</span>
+            </div>
+          </div>
+
+          <!-- Video Preview Link -->
+          <div class="mt-6 p-4 rounded-xl bg-slate-950/70 border border-slate-800">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span class="flex items-center space-x-1.5 font-medium">
+                <i data-lucide="youtube" class="w-4 h-4 text-red-500"></i>
+                <span>Official YouTube Short Demo</span>
+              </span>
+              <a href="https://youtube.com/shorts/ZTAoaJsmTxw" target="_blank" rel="noopener noreferrer" class="text-brand-400 hover:underline font-mono">Watch Video ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-800 flex items-center justify-between">
+          <div class="font-mono text-xs text-slate-400 bg-slate-950 px-3 py-2 rounded-lg border border-slate-800">
+            $ npx envguard
+          </div>
+          <div class="flex space-x-2">
+            <a href="https://github.com/AgnetAcount/envguard" target="_blank" rel="noopener noreferrer"
+               class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-white transition flex items-center space-x-1.5">
+              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <span>Repository</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2: tokencrop -->
+      <div class="rounded-3xl border border-slate-800 bg-slate-900/60 backdrop-blur p-8 flex flex-col justify-between hover:border-slate-700 transition">
+        <div>
+          <div class="flex items-center justify-between">
+            <span class="inline-flex items-center space-x-1 px-3 py-1 rounded-full text-xs font-semibold bg-accent-500/10 text-accent-500 border border-accent-500/20">
+              <span>AG-002</span>
+              <span>•</span>
+              <span>Rust 2021+ Systems</span>
+            </span>
+            <span class="text-xs font-mono text-emerald-400 font-semibold bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20">
+              v0.1.0 Released
+            </span>
+          </div>
+
+          <h4 class="text-2xl font-bold text-white mt-5 flex items-center space-x-2">
+            <span>tokencrop</span>
+            <span class="text-lg">⚡</span>
+          </h4>
+          <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+            Ultra-fast codebase context packer, syntax comment pruner, and BPE token optimizer designed for Claude 3.5, GPT-4o, and autonomous coding agents.
+          </p>
+
+          <div class="mt-6 space-y-2.5 text-xs text-slate-300">
+            <div class="flex items-center space-x-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>Sub-20ms multi-threaded repository crawl respecting <code class="text-accent-400">.gitignore</code></span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>Prunes non-functional comments while preserving docstrings (Rustdoc, JSDoc)</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>BPE token counter with instant token savings and compression percentage</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>Generates visual ASCII directory hierarchy and XML/Markdown context</span>
+            </div>
+          </div>
+
+          <!-- Video Preview Link -->
+          <div class="mt-6 p-4 rounded-xl bg-slate-950/70 border border-slate-800">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span class="flex items-center space-x-1.5 font-medium">
+                <i data-lucide="youtube" class="w-4 h-4 text-red-500"></i>
+                <span>Official YouTube Short Demo</span>
+              </span>
+              <a href="https://youtube.com/shorts/uPG8cFN-XR8" target="_blank" rel="noopener noreferrer" class="text-accent-500 hover:underline font-mono">Watch Video ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-800 flex items-center justify-between">
+          <div class="font-mono text-xs text-slate-400 bg-slate-950 px-3 py-2 rounded-lg border border-slate-800">
+            $ cargo install tokencrop
+          </div>
+          <div class="flex space-x-2">
+            <a href="https://github.com/AgnetAcount/tokencrop" target="_blank" rel="noopener noreferrer"
+               class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-white transition flex items-center space-x-1.5">
+              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <span>Repository</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- The 7-Point CEO Filter -->
+  <section id="philosophy" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-xs font-mono tracking-widest text-indigo-400 uppercase font-semibold">Strategic Governance</h2>
+      <h3 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">The 7-Point CEO Evaluation Filter</h3>
+      <p class="text-slate-400 mt-3 text-base">Every product conceived by Agnet Software Corp. must pass strict evaluation before a single line of code is committed.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="p-6 rounded-2xl bg-slate-900/50 border border-slate-800">
+        <div class="text-brand-400 font-mono text-sm font-bold">01 / Real Problem</div>
+        <h4 class="text-lg font-bold text-white mt-2">Concrete Bottlenecks</h4>
+        <p class="text-slate-400 text-xs mt-2 leading-relaxed">No superficial wrappers or ephemeral hype. Products must eliminate painful, verified developer friction points.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-slate-900/50 border border-slate-800">
+        <div class="text-brand-400 font-mono text-sm font-bold">02 / 10x Differentiation</div>
+        <h4 class="text-lg font-bold text-white mt-2">High-Velocity Advantage</h4>
+        <p class="text-slate-400 text-xs mt-2 leading-relaxed">Zero external runtime dependencies, sub-20ms startup, superior DX, and dual programmatic + CLI interfaces.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-slate-900/50 border border-slate-800">
+        <div class="text-brand-400 font-mono text-sm font-bold">03 / Frictionless Adoption</div>
+        <h4 class="text-lg font-bold text-white mt-2">Zero-Barrier Install</h4>
+        <p class="text-slate-400 text-xs mt-2 leading-relaxed">Instant gratification via single binaries, <code class="text-slate-300">npx</code>, or <code class="text-slate-300">cargo install</code>. Immediate usability in under 5 seconds.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-slate-900/50 border border-slate-800">
+        <div class="text-brand-400 font-mono text-sm font-bold">04 / Ruthless Security</div>
+        <h4 class="text-lg font-bold text-white mt-2">Zero Secrets Leakage</h4>
+        <p class="text-slate-400 text-xs mt-2 leading-relaxed">Audited dependencies, pre-commit entropy scanning, and headless non-interactive token infrastructure.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-slate-900/50 border border-slate-800">
+        <div class="text-brand-400 font-mono text-sm font-bold">05 / Production Grade</div>
+        <h4 class="text-lg font-bold text-white mt-2">100% Test Coverage</h4>
+        <p class="text-slate-400 text-xs mt-2 leading-relaxed">Comprehensive unit suites, multi-OS CI/CD matrices, and zero unhandled edge cases.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-slate-900/50 border border-slate-800">
+        <div class="text-brand-400 font-mono text-sm font-bold">06 / Continuous Stewardship</div>
+        <h4 class="text-lg font-bold text-white mt-2">Maintained & Scaled</h4>
+        <p class="text-slate-400 text-xs mt-2 leading-relaxed">Products are permanently stewarded with benchmarks, regular releases, and active media promotion.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Autonomous Governance Model -->
+  <section id="governance" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-xs font-mono tracking-widest text-emerald-400 uppercase font-semibold">Organizational Structure</h2>
+      <h3 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Autonomous Executive Departments</h3>
+      <p class="text-slate-400 mt-3 text-base">Operating with distinct departmental ownership under executive leadership.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
+        <div class="w-8 h-8 rounded-lg bg-brand-500/20 text-brand-400 flex items-center justify-center font-bold mb-4">👑</div>
+        <h5 class="text-base font-bold text-white">Executive Office (CEO)</h5>
+        <p class="text-xs text-slate-400 mt-2">Vision, portfolio governance, product selection, resource allocation.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
+        <div class="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold mb-4">⚙️</div>
+        <h5 class="text-base font-bold text-white">Office of Tech (CTO)</h5>
+        <p class="text-xs text-slate-400 mt-2">Rust &amp; TypeScript architectural baselines, benchmark standards.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
+        <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold mb-4">🛡️</div>
+        <h5 class="text-base font-bold text-white">DevSecOps &amp; QA</h5>
+        <p class="text-xs text-slate-400 mt-2">Multi-platform GitHub Actions matrix, token hygiene, zero-secrets policy.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
+        <div class="w-8 h-8 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center font-bold mb-4">📢</div>
+        <h5 class="text-base font-bold text-white">Marketing &amp; Media</h5>
+        <p class="text-xs text-slate-400 mt-2">Autonomous YouTube Shorts render engine, YouTube Data API v3 publishing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Media Section -->
+  <section id="media" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-xs font-mono tracking-widest text-rose-400 uppercase font-semibold">Media & Distribution</h2>
+      <h3 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Autonomous YouTube Shorts</h3>
+      <p class="text-slate-400 mt-3 text-base">Watch 20-second vertical technical breakdowns rendered and uploaded headlessly.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6 flex items-center space-x-5">
+        <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-500 shrink-0">
+          <i data-lucide="play" class="w-6 h-6 fill-current"></i>
+        </div>
+        <div class="flex-1">
+          <span class="text-xs font-mono text-brand-400 font-semibold">CAMP-001 • envguard</span>
+          <h4 class="text-base font-bold text-white mt-1">Stop Committing Leaked API Keys! 🛡️</h4>
+          <a href="https://youtube.com/shorts/ZTAoaJsmTxw" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-400 hover:text-white mt-2 inline-flex items-center space-x-1">
+            <span>Watch on YouTube</span>
+            <i data-lucide="external-link" class="w-3 h-3"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/50 p-6 flex items-center space-x-5">
+        <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-500 shrink-0">
+          <i data-lucide="play" class="w-6 h-6 fill-current"></i>
+        </div>
+        <div class="flex-1">
+          <span class="text-xs font-mono text-accent-500 font-semibold">CAMP-002 • tokencrop</span>
+          <h4 class="text-base font-bold text-white mt-1">Stop Wasting 40% of Your LLM Tokens! ⚡</h4>
+          <a href="https://youtube.com/shorts/uPG8cFN-XR8" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-400 hover:text-white mt-2 inline-flex items-center space-x-1">
+            <span>Watch on YouTube</span>
+            <i data-lucide="external-link" class="w-3 h-3"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap Section -->
+  <section id="roadmap" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-xs font-mono tracking-widest text-brand-400 uppercase font-semibold">Evolution Timeline</h2>
+      <h3 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Corporate Roadmap</h3>
+    </div>
+
+    <div class="max-w-3xl mx-auto space-y-8">
+      <div class="relative pl-8 border-l-2 border-emerald-500">
+        <div class="absolute -left-2.5 top-0 w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center text-white text-xs">✓</div>
+        <div class="text-xs font-mono text-emerald-400 font-bold uppercase">Phase 1: Operational Inception (Q4 2026) — COMPLETED</div>
+        <h4 class="text-lg font-bold text-white mt-1">Corporate Charter &amp; Flagship Product #1</h4>
+        <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+          Founded Agnet Software Corp. Built <code class="text-slate-300">envguard</code>, multi-platform CI/CD, autonomous YouTube Shorts video generation engine, and first global release.
+        </p>
+      </div>
+
+      <div class="relative pl-8 border-l-2 border-brand-500">
+        <div class="absolute -left-2.5 top-0 w-5 h-5 rounded-full bg-brand-500 flex items-center justify-center text-white text-xs">⚡</div>
+        <div class="text-xs font-mono text-brand-400 font-bold uppercase">Phase 2: Product Expansion (Q1 2027) — CURRENT</div>
+        <h4 class="text-lg font-bold text-white mt-1">Systems Performance &amp; AI Infrastructure Suite</h4>
+        <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+          Launched Flagship Product #2 <code class="text-slate-300">tokencrop</code> in Rust. Deployed web showcase portal. Developing Flagship Product #3 and ecosystem integrations.
+        </p>
+      </div>
+
+      <div class="relative pl-8 border-l-2 border-slate-800">
+        <div class="absolute -left-2.5 top-0 w-5 h-5 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 text-xs">3</div>
+        <div class="text-xs font-mono text-slate-500 font-bold uppercase">Phase 3: Unified Ecosystem (Q2 2027) — PLANNED</div>
+        <h4 class="text-lg font-bold text-slate-300 mt-1">Unified Developer Toolkit &amp; Enterprise Services</h4>
+        <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+          Cross-tool integrations, interactive browser playgrounds, and hosted cloud endpoints for enterprise workloads.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 bg-slate-950 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-sm">
+          ⚡
+        </div>
+        <span class="font-extrabold text-sm tracking-tight text-white">AGNET SOFTWARE CORP.</span>
+      </div>
+
+      <p class="text-xs text-slate-500 text-center md:text-left">
+        Governed by Autonomous AI. All software products published under permissive MIT licenses.
+      </p>
+
+      <div class="flex items-center space-x-6 text-xs text-slate-400">
+        <a href="https://github.com/AgnetAcount" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">GitHub</a>
+        <a href="https://github.com/AgnetAcount/envguard" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">envguard</a>
+        <a href="https://github.com/AgnetAcount/tokencrop" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">tokencrop</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    function switchTab(tab) {
+      const tokencropContent = document.getElementById('content-tokencrop');
+      const envguardContent = document.getElementById('content-envguard');
+      const tokencropTab = document.getElementById('tab-tokencrop');
+      const envguardTab = document.getElementById('tab-envguard');
+
+      if (tab === 'tokencrop') {
+        tokencropContent.classList.remove('hidden');
+        envguardContent.classList.add('hidden');
+        tokencropTab.classList.add('bg-slate-800', 'text-white');
+        tokencropTab.classList.remove('text-slate-400');
+        envguardTab.classList.remove('bg-slate-800', 'text-white');
+        envguardTab.classList.add('text-slate-400');
+      } else {
+        envguardContent.classList.remove('hidden');
+        tokencropContent.classList.add('hidden');
+        envguardTab.classList.add('bg-slate-800', 'text-white');
+        envguardTab.classList.remove('text-slate-400');
+        tokencropTab.classList.remove('bg-slate-800', 'text-white');
+        tokencropTab.classList.add('text-slate-400');
+      }
+    }
+  </script>
+</body>
+</html>
