@@ -123,13 +123,23 @@
           <span class="ml-2 text-xs text-slate-400 font-mono">agnet-terminal</span>
         </div>
         <div class="flex space-x-2">
-          <button onclick="switchTab('tokencrop')" id="tab-tokencrop" class="text-xs px-3 py-1 rounded bg-slate-800 text-white font-mono transition">tokencrop (Rust)</button>
+          <button onclick="switchTab('schemaguard')" id="tab-schemaguard" class="text-xs px-3 py-1 rounded bg-slate-800 text-white font-mono transition">schemaguard (AI)</button>
+          <button onclick="switchTab('tokencrop')" id="tab-tokencrop" class="text-xs px-3 py-1 rounded text-slate-400 hover:text-white font-mono transition">tokencrop (Rust)</button>
           <button onclick="switchTab('envguard')" id="tab-envguard" class="text-xs px-3 py-1 rounded text-slate-400 hover:text-white font-mono transition">envguard (TS)</button>
         </div>
       </div>
 
+      <!-- Tab schemaguard -->
+      <div id="content-schemaguard" class="p-6 font-mono text-sm leading-relaxed overflow-x-auto text-slate-300">
+        <div class="text-cyan-400 font-semibold">$ npx schemaguard lint ./tools/search.json --strict</div>
+        <div class="mt-2"><span class="bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded font-bold">PASS</span> <span class="text-white font-bold">semantic_search</span> <span class="text-slate-400">(OPENAI format) — Score: <span class="text-emerald-400 font-bold">100/100</span></span></div>
+        <div class="text-slate-400 mt-2">✔ Schema adheres strictly to Structured Outputs constraints</div>
+        <div class="text-emerald-400 mt-1">✔ Converted to Anthropic Claude &amp; MCP tool schema</div>
+        <div class="text-indigo-400 mt-2">✨ Generated TypeScript interface: SemanticSearchParams</div>
+      </div>
+
       <!-- Tab tokencrop -->
-      <div id="content-tokencrop" class="p-6 font-mono text-sm leading-relaxed overflow-x-auto text-slate-300">
+      <div id="content-tokencrop" class="hidden p-6 font-mono text-sm leading-relaxed overflow-x-auto text-slate-300">
         <div class="text-orange-400 font-semibold">$ tokencrop . -o prompt.xml --stats</div>
         <div class="text-emerald-400 mt-2">✔ Context written to prompt.xml</div>
         <div class="text-cyan-400 mt-3 font-bold">─── tokencrop Execution Summary ───</div>
@@ -158,7 +168,7 @@
   <section class="border-y border-slate-800/80 bg-slate-900/40 py-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
       <div>
-        <div class="text-3xl sm:text-4xl font-extrabold text-white">2</div>
+        <div class="text-3xl sm:text-4xl font-extrabold text-white">3</div>
         <div class="text-xs sm:text-sm text-slate-400 mt-1 font-medium">Flagship Products Released</div>
       </div>
       <div>
@@ -184,7 +194,7 @@
       <p class="text-slate-400 mt-3 text-base">Production-grade developer tools addressing real-world engineering bottlenecks.</p>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
       
       <!-- Product 1: envguard -->
       <div class="rounded-3xl border border-slate-800 bg-slate-900/60 backdrop-blur p-8 flex flex-col justify-between hover:border-slate-700 transition">
@@ -312,6 +322,73 @@
           </div>
           <div class="flex space-x-2">
             <a href="https://github.com/AgnetAcount/tokencrop" target="_blank" rel="noopener noreferrer"
+               class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-white transition flex items-center space-x-1.5">
+              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <span>Repository</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3: schemaguard -->
+      <div class="rounded-3xl border border-slate-800 bg-slate-900/60 backdrop-blur p-8 flex flex-col justify-between hover:border-slate-700 transition">
+        <div>
+          <div class="flex items-center justify-between">
+            <span class="inline-flex items-center space-x-1 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+              <span>AG-003</span>
+              <span>•</span>
+              <span>AI Agent Systems</span>
+            </span>
+            <span class="text-xs font-mono text-emerald-400 font-semibold bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20">
+              v0.1.0 Released
+            </span>
+          </div>
+
+          <h4 class="text-2xl font-bold text-white mt-5 flex items-center space-x-2">
+            <span>schemaguard</span>
+            <span class="text-lg">🛡️</span>
+          </h4>
+          <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+            Zero-dependency schema validator, drift detector, and contract testing toolkit for AI agent tool definitions (OpenAI, Anthropic Claude, Gemini, MCP).
+          </p>
+
+          <div class="mt-6 space-y-2.5 text-xs text-slate-300">
+            <div class="flex items-center space-x-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>Audits schemas across 12+ LLM compliance rules (Score 0-100)</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>Universal converter: OpenAI ↔ Anthropic ↔ Gemini ↔ MCP</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>Generates synthetic mock payloads (happy, minimal, edge)</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>Microsecond runtime validator &amp; TypeScript typegen</span>
+            </div>
+          </div>
+
+          <!-- Documentation / Link -->
+          <div class="mt-6 p-4 rounded-xl bg-slate-950/70 border border-slate-800">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span class="flex items-center space-x-1.5 font-medium">
+                <i data-lucide="cpu" class="w-4 h-4 text-cyan-400"></i>
+                <span>Zero-Dependency AI Toolkit</span>
+              </span>
+              <a href="https://github.com/AgnetAcount/schemaguard#readme" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline font-mono">Documentation ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-800 flex items-center justify-between">
+          <div class="font-mono text-xs text-slate-400 bg-slate-950 px-3 py-2 rounded-lg border border-slate-800">
+            $ npx schemaguard lint
+          </div>
+          <div class="flex space-x-2">
+            <a href="https://github.com/AgnetAcount/schemaguard" target="_blank" rel="noopener noreferrer"
                class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-white transition flex items-center space-x-1.5">
               <i data-lucide="github" class="w-3.5 h-3.5"></i>
               <span>Repository</span>
@@ -458,7 +535,7 @@
         <div class="text-xs font-mono text-brand-400 font-bold uppercase">Phase 2: Product Expansion (Q1 2027) — CURRENT</div>
         <h4 class="text-lg font-bold text-white mt-1">Systems Performance &amp; AI Infrastructure Suite</h4>
         <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-          Launched Flagship Product #2 <code class="text-slate-300">tokencrop</code> in Rust. Deployed web showcase portal. Developing Flagship Product #3 and ecosystem integrations.
+          Launched Flagship Product #2 <code class="text-slate-300">tokencrop</code> (Rust) and Flagship Product #3 <code class="text-slate-300">schemaguard</code> (AI Agent Tool Validator). Deployed web showcase portal. Developing unified developer toolkit.
         </p>
       </div>
 
@@ -491,6 +568,7 @@
         <a href="https://github.com/AgnetAcount" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">GitHub</a>
         <a href="https://github.com/AgnetAcount/envguard" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">envguard</a>
         <a href="https://github.com/AgnetAcount/tokencrop" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">tokencrop</a>
+        <a href="https://github.com/AgnetAcount/schemaguard" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">schemaguard</a>
       </div>
     </div>
   </footer>
@@ -499,26 +577,20 @@
     lucide.createIcons();
 
     function switchTab(tab) {
-      const tokencropContent = document.getElementById('content-tokencrop');
-      const envguardContent = document.getElementById('content-envguard');
-      const tokencropTab = document.getElementById('tab-tokencrop');
-      const envguardTab = document.getElementById('tab-envguard');
-
-      if (tab === 'tokencrop') {
-        tokencropContent.classList.remove('hidden');
-        envguardContent.classList.add('hidden');
-        tokencropTab.classList.add('bg-slate-800', 'text-white');
-        tokencropTab.classList.remove('text-slate-400');
-        envguardTab.classList.remove('bg-slate-800', 'text-white');
-        envguardTab.classList.add('text-slate-400');
-      } else {
-        envguardContent.classList.remove('hidden');
-        tokencropContent.classList.add('hidden');
-        envguardTab.classList.add('bg-slate-800', 'text-white');
-        envguardTab.classList.remove('text-slate-400');
-        tokencropTab.classList.remove('bg-slate-800', 'text-white');
-        tokencropTab.classList.add('text-slate-400');
-      }
+      const tabs = ['schemaguard', 'tokencrop', 'envguard'];
+      tabs.forEach(t => {
+        const content = document.getElementById('content-' + t);
+        const btn = document.getElementById('tab-' + t);
+        if (t === tab) {
+          content.classList.remove('hidden');
+          btn.classList.add('bg-slate-800', 'text-white');
+          btn.classList.remove('text-slate-400');
+        } else {
+          content.classList.add('hidden');
+          btn.classList.remove('bg-slate-800', 'text-white');
+          btn.classList.add('text-slate-400');
+        }
+      });
     }
   </script>
 </body>
